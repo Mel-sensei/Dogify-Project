@@ -1,0 +1,25 @@
+ion-content{
+  --background: #34B0D2 url('/assets/images/Background.png') no-repeat center top fixed;
+  background-size: cover;    
+
+}
+
+center{
+  margin: 5rem;
+  margin-top: 0px;
+}
+
+h2{
+  color: #f4a460;
+}
+h1{
+   color: #fff;
+}
+
+p{
+  color:#ffffff;
+  
+  span{
+      color: #f4a460;
+  }
+}

@@ -1,0 +1,24 @@
+
+<ion-content>
+  <app-back-button routerLink="/user-profile"></app-back-button>
+  
+  <center>
+    <img src="/assets/icon/DOGIFY.png" style="align-items: center;">
+  </center>
+<form  [formGroup]="profileForm">
+  <div class="content-margin">
+    
+    <h1>Your Current User Name:</h1>
+    
+    <ion-label><p>{{fullname}}</p></ion-label> <!--Dynamic user input typescript-->
+    
+    <app-input label="New First Name"  inputmode="text" formControlName="fname" ngDefaultControl></app-input>
+  
+    <app-input label="New Last Name" inputmode="text" formControlName="lname" ngDefaultControl></app-input>
+ 
+
+    <form-button (click)="updateUser()">Update</form-button>
+  </div>
+    
+</form>
+</ion-content>

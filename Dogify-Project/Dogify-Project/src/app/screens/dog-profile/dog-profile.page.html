@@ -1,0 +1,63 @@
+
+  <ion-header>
+  <ion-toolbar>
+    <app-back-button slot="start" routerLink="/home/transactions"></app-back-button>
+    <ion-title>
+      <h3>Edit Dog Profile</h3>
+    </ion-title>
+    <ion-button fill="clear" slot="end" style="color: #a0a;" size="larger" (click)="saveUpdate()">
+      <ion-icon name="checkmark-outline"></ion-icon>
+    </ion-button>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content *ngFor="let detail of petDetails">
+<div [formGroup]="profileForm">
+
+ <ion-header class="avatar-display">
+   <center>
+    <ion-avatar class="ava" [ngStyle]="{'background-image': 'url(http://localhost/Dogify-Project/API/Uploads/' + detail.pet_image + ')'}">
+   
+      <div class="overlay" > 
+        <input type="file" accept="image/png, image/jpeg"  (change)="selectFile($event)" > </div>
+    </ion-avatar>
+   </center>
+ </ion-header>
+
+<ion-list>
+  <ion-item routerLink="/change-dog-name">
+    Dog name
+    <ion-input slot="end" ngDefaultControl formControlName="pet_name">{{detail.pet_name}}</ion-input>
+    <ion-icon name="arrow-forward" slot="end"></ion-icon>
+  </ion-item>
+ <ion-item routerLink="/change-dog-breed">
+    Breed
+    <ion-input slot="end" ngDefaultControl formControlName="breed">{{detail.pet_breed}}</ion-input>
+    <ion-icon name="arrow-forward" slot="end"></ion-icon>
+  </ion-item>
+
+  <ion-item>
+    <ion-label slot="start" >Gender: {{detail.pet_gender}}</ion-label>
+    <ion-select class="custom-options" interface="popover" ngDefaultControl formControlName="gender">
+      <ion-select-option value="male" >Male</ion-select-option>
+      <ion-select-option value="female">Female</ion-select-option>
+    </ion-select>
+  </ion-item>
+  <ion-item routerLink="/change-dog-age">
+    Age
+    <ion-input slot="end" type="number" ngDefaultControl formControlName="age">{{detail.pet_age}}</ion-input>
+    <ion-icon name="arrow-forward" slot="end"></ion-icon>
+  </ion-item>
+ 
+  <ion-item>
+      <ion-label>Status for breeding:</ion-label>
+      <ion-select class="custom-options" interface="popover" ngDefaultControl formControlName="stats">
+        <ion-select-option value="Active" >Active </ion-select-option>
+        <ion-select-option value="notActive">Not Active</ion-select-option>
+      </ion-select>
+    </ion-item>
+</ion-list>
+</div>
+</ion-content>
+

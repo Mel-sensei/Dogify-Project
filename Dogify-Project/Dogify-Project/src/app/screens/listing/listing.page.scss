@@ -1,0 +1,28 @@
+ion-content {
+
+  --background: #34B0D2 url('/assets/images/Background.png') no-repeat center top fixed;
+  background-size: cover;    
+
+
+  --padding-start: 2rem;
+  --padding-end: 2rem;
+  }
+  ion-avatar {
+    max-width: 45px;
+    max-height: 45px;
+    margin-right: 15px;
+   }
+
+   ion-button{
+    --color: #a0a;
+   }
+
+   ion-card{
+     border-radius: 5% 5% 5% 5%;
+     margin-bottom: 10px;
+   }
+    .image {
+      background-size: 300px 200px;
+    box-shadow: 10px 10px 10px 0px #c5c5c5;
+  }
+   

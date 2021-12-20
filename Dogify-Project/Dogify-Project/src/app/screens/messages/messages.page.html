@@ -1,0 +1,191 @@
+<ion-header class="ion-no-border" mode="ios">
+  <ion-toolbar class="ion-padding">
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Message</ion-title>
+   
+  </ion-toolbar>
+</ion-header>
+
+
+
+<ion-content>
+<!-- <center>
+  <h2>Messages</h2>
+</center>
+  
+apply ngFor
+<app-transac-card></app-transac-card> 
+-->
+ 
+<div class="chat-list" *ngIf="activeTab == 'chats'">
+  <div class="all-chats ion-padding" >
+    <div class="heading">
+      <h1>Unread chats</h1>
+      
+    </div>
+    <div class="chats">
+      <div *ngIf = "users == '' "><br><center>No new messages</center></div>
+      <div *ngFor = "let user of users">
+      <ion-item lines="none" *ngIf="user.sender != user_id" (click)="read(user.sender)"  [routerLink]="['/conversation-page/',user.sender]">
+        <ion-avatar *ngIf = " user.user_fullname_s == user_fullname" class="ava" slot="start"[ngStyle] = "{'background-image': 'url(http://localhost/Dogify-Project/API/Uploads/' + user.user_image_r + ')'}">
+           <div>
+              <br>
+              <br>
+              <br>
+            </div>
+        </ion-avatar>
+        <ion-avatar *ngIf = " user.user_fullname_r == user_fullname" class="ava" slot="start"[ngStyle] = "{'background-image': 'url(http://localhost/Dogify-Project/API/Uploads/' + user.user_image + ')'}">
+          <div>
+             <br>
+             <br>
+             <br>
+           </div>
+       </ion-avatar>
+        <ion-label class="ion-text-nowrap" *ngIf = "user.user_fullname_s == user_fullname">
+          <h2>{{user.user_fullname_s}}  </h2>
+        </ion-label>
+        <ion-label class="ion-text-nowrap" *ngIf = "user.user_fullname_r == user_fullname">
+          <h2>{{user.user_fullname_s}}  </h2>
+        </ion-label>
+        <div class="info-div" *ngIf = "user.user_fullname_s == user_fullname">  
+          <ion-icon name="checkmark-done-outline"> </ion-icon>
+          <p>sent</p>
+        </div>
+        <div class="info-div" *ngIf = "user.user_fullname_r == user_fullname" >
+          <div class="info-div">
+            <ion-badge>New</ion-badge>
+          </div>
+        </div>
+      </ion-item>
+    
+      <ion-item lines="none" *ngIf="user.sender == user_id" (click)="read(user.sender)"  [routerLink]="['/conversation-page/',user_id]">
+        <ion-avatar class="ava" slot="start"[ngStyle] = "{'background-image': 'url(http://localhost/Dogify-Project/API/Uploads/' + user.user_image_r + ')'}">
+           <div>
+              <br>
+              <br>
+              <br>
+            </div>
+        </ion-avatar>
+
+        <ion-label class="ion-text-nowrap" *ngIf = "user.user_fullname_s == user_fullname">
+          <h2>{{user.user_fullname_r}} </h2>
+        </ion-label>
+        <ion-label class="ion-text-nowrap" *ngIf = "user.user_fullname_r == user_fullname">
+          <h2>{{user.user_fullname_s}} </h2>
+        </ion-label>
+        <div class="info-div" *ngIf = "user.user_fullname_s == user_fullname">  
+          <ion-icon name="checkmark-done-outline"> </ion-icon>
+          <p>sent</p>
+        </div>
+        <div class="info-div" *ngIf = "user.user_fullname_r == user_fullname" >
+          <div class="info-div">
+            <ion-badge>New</ion-badge>
+          </div>
+        </div>
+      </ion-item>
+
+
+    </div>
+    </div>
+  </div> 
+
+      <div class="recent-chats ion-padding">
+        <div class="heading">
+          <h1>Read Chats</h1>
+         
+        </div>
+        <div class="chats" *ngFor = "let read of reads">
+          
+          <ion-item lines="none"  *ngIf="read.sender != user_id" [routerLink]="['/conversation-page/',read.sender]">
+       
+            <ion-avatar  *ngIf="read.sender == user_id" class="ava" slot="start" [ngStyle] = "{'background-image': 'url(http://localhost/Dogify-Project/API/Uploads/' + read.user_image + ')'}">
+              <div>
+                 <br>
+                 <br>
+                 <br>
+               </div>
+           </ion-avatar>
+           <ion-avatar  *ngIf="read.sender != user_id" class="ava" slot="start" [ngStyle] = "{'background-image': 'url(http://localhost/Dogify-Project/API/Uploads/' + read.user_image_r + ')'}">
+            <div>
+               <br>
+               <br>
+               <br>
+             </div>
+         </ion-avatar>
+            <ion-label class="ion-text-nowrap" *ngIf="read.sender == user_id">
+              <h2>{{read.user_fullname_r}}</h2>
+            </ion-label>
+            <ion-label class="ion-text-nowrap" *ngIf="read.sender != user_id">
+              <h2>{{read.user_fullname_s}}</h2>
+            </ion-label>
+            <div class="info-div"  *ngIf = "read.sender == user_id">
+              <ion-icon name="checkmark-done-outline">read</ion-icon>
+              <p>sent</p>
+            </div>
+            <div class="info-div"  *ngIf = "read.sender != user_id">
+              <ion-icon name="checkmark-done-outline">read</ion-icon>
+              <p>Read</p>
+            </div>
+          </ion-item>
+
+          
+        </div>
+
+        <div class="chats" *ngFor = "let read of reads">
+          
+          <ion-item lines="none"  *ngIf="read.sender == user_id" [routerLink]="['/conversation-page/',read.user_id]">
+       
+            <ion-avatar  *ngIf="read.sender == user_id" class="ava" slot="start" [ngStyle] = "{'background-image': 'url(http://localhost/Dogify-Project/API/Uploads/' + read.user_image_r + ')'}">
+              <div>
+                 <br>
+                 <br>
+                 <br>
+               </div>
+           </ion-avatar>
+           <ion-avatar  *ngIf="read.sender != user_id" class="ava" slot="start" [ngStyle] = "{'background-image': 'url(http://localhost/Dogify-Project/API/Uploads/' + read.user_image + ')'}">
+            <div>
+               <br>
+               <br>
+               <br>
+             </div>
+         </ion-avatar>
+            <ion-label class="ion-text-nowrap" *ngIf="read.sender == user_id">
+              <h2>{{read.user_fullname_r}}</h2>
+            </ion-label>
+            <ion-label class="ion-text-nowrap" *ngIf="read.sender != user_id">
+              <h2>{{read.user_fullname_s}}</h2>
+            </ion-label>
+            <div class="info-div"  *ngIf = "read.sender == user_id">
+              <ion-icon name="checkmark-done-outline">read</ion-icon>
+              <p>sent</p>
+            </div>
+            <div class="info-div"  *ngIf = "read.sender != user_id">
+              <ion-icon name="checkmark-done-outline">read</ion-icon>
+              <p>Read</p>
+            </div>
+          </ion-item>
+
+          
+        </div>
+      </div> 
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+</div>
+</ion-content>

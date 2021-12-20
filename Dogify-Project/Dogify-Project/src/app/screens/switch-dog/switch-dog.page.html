@@ -1,0 +1,29 @@
+
+<ion-content>
+<center>
+  <img src="/assets/icon/DOGIFY.png" style="align-items: center;">
+  <h2>Select a profile for your dog</h2>
+
+ 
+   <ion-button fill="clear" size="large" routerLink="/register-dog">
+     <ion-label color="light" class="ion-text-wrap">Add Account</ion-label>
+     <ion-icon class="ion-padding-left" slot="icon-only" name="add-circle-outline" color="light"></ion-icon>
+   </ion-button>
+
+   
+ <div *ngFor="let details of petDetails" >
+       <ion-button fill="clear" size="large" (click)="navigate(details.pet_id)">
+        <ion-label color="light" class="ion-text-wrap">{{details.pet_name}}</ion-label>
+        <ion-avatar slot="start">
+          <img src="/assets/images/seldon.png">
+        </ion-avatar>
+      </ion-button>
+  
+  <br>
+  <br>
+  <br>
+
+        <p *ngIf="details == ''">No profile shows up? Let's create one, try tapping the <span routerLink="/register-dog">"add button"</span></p>
+</div>
+ </center>
+</ion-content>

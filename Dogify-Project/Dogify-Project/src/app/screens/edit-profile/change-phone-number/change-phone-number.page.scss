@@ -1,0 +1,35 @@
+ion-content{
+  --background: #34B0D2 url('/assets/images/Background.png') no-repeat center top fixed;
+  background-size: cover;    
+
+}
+
+h3 {
+    
+  margin-top: 10px;
+  font-size: 32px;
+  font-weight: 700;
+  text-align: center;
+  padding-left: 20px;
+  
+}
+
+h1 {
+  font-weight: 600;
+  
+}
+
+p {
+  font-size: 20px;
+  line-height: 1.6;
+  color: #fff;
+  margin-bottom: 20px;
+}
+  .content-margin{
+    margin: 2rem;
+  }
+
+  .error-message {
+    color: var(--ion-color-danger);
+    
+  }

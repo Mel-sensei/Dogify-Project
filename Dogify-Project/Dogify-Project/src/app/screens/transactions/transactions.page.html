@@ -1,0 +1,64 @@
+
+
+<ion-content *ngFor="let detail of petDetails">
+  <div class="image" [ngStyle]="{'background-image': 'url(http://localhost/Dogify-Project/API/Uploads/' + detail.pet_image + ')'}">
+        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+  </div>
+  <div class="ion-padding-vertical">
+    <h1 class="item-name"> {{detail.pet_name}}</h1>
+
+    <h4 class="breed">
+      {{detail.pet_breed}}
+      <span >Age:{{detail.pet_age}}</span>
+      <span >Gender:{{detail.pet_gender}}</span>
+    </h4>
+    <ion-icon name="compass" slot="start"></ion-icon>
+            {{detail.pet_address}}
+  </div>
+
+  <div class="seperator">
+    <hr>
+  </div>
+
+
+  <div class="seperator">
+    <hr>
+  </div>
+
+  <div class="description">
+    <ion-list>
+      <ion-item>
+        <ion-avatar slot="start">
+          <img [src]="img">
+        </ion-avatar>
+        <ion-label>
+          <h5>{{user_id}}</h5>
+          <p>Owner</p>
+        </ion-label>
+      
+      </ion-item>
+      <p>
+        {{detail.pet_bio}}
+      </p>
+    </ion-list>
+  
+
+    
+
+  </div>
+
+  <div class="seperator">
+    <hr>
+  </div>
+<ion-grid>
+  <ion-row>
+    <ion-col size="5">
+      <form-button expand="full" color="light" label="Edit Pet" [routerLink]="['/dog-profile',detail.pet_id]"></form-button>
+    </ion-col>
+    <ion-col size="6">
+      <form-button expand="full" routerLink="/switch-dog" label="Switch Pet"></form-button>
+    </ion-col>
+  </ion-row>
+</ion-grid>
+
+</ion-content>

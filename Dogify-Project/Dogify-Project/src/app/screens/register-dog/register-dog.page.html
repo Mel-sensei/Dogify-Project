@@ -1,0 +1,225 @@
+
+<ion-content>
+<app-back-button routerLink="/switch-dog"></app-back-button>
+  
+  <center>
+    <img src="/assets/icon/DOGIFY.png" style="align-items: center;">
+    <h2>Create a profile for your dog</h2>
+  
+    <input type="file" accept="image/png, image/jpeg"  (change)="selectFile($event)" > 
+  
+ 
+    <br>
+    <br>
+
+     <div [formGroup]="profileForm">
+            <app-input label="Dog name" type="text" ngDefaultControl formControlName="pet_name"></app-input>
+            
+            <app-input label="Age" type="number" ngDefaultControl formControlName="age"></app-input>
+            <app-input label="Address" type="text" ngDefaultControl formControlName="address"></app-input>
+            <app-input label="bio" type="text" ngDefaultControl formControlName="bio"></app-input>
+         <ion-item>
+         
+            <ion-label>Breed</ion-label>
+            <ion-select placeholder="Select One" ngDefaultControl formControlName="breed">
+              <ion-select-option>Afador</ion-select-option>
+              <ion-select-option>Afador</ion-select-option>
+              <ion-select-option>Affenhuahua</ion-select-option>
+              <ion-select-option>Affenhuahua</ion-select-option>
+              <ion-select-option>Affenpinscher</ion-select-option>
+              <ion-select-option>Affenpinscher</ion-select-option>
+              <ion-select-option>Afghan Hound</ion-select-option>
+              <ion-select-option>Afghan Hound</ion-select-option>
+              <ion-select-option>Airedale Terrier</ion-select-option>
+              <ion-select-option>Airedale Terrier</ion-select-option>
+              <ion-select-option>Akbash</ion-select-option>
+              <ion-select-option>Akbash</ion-select-option>
+              <ion-select-option>Akita</ion-select-option>
+              <ion-select-option>Akita</ion-select-option>
+              <ion-select-option>Akita Chow</ion-select-option>
+              <ion-select-option>American Foxhound</ion-select-option>
+              <ion-select-option>American Hairless Terrier</ion-select-option>
+              <ion-select-option>Basset Hound</ion-select-option>
+              <ion-select-option>Basset Retriever</ion-select-option>
+              <ion-select-option>Basset Retriever</ion-select-option>
+              <ion-select-option>Bavarian Mountain Scent Hound</ion-select-option>
+              <ion-select-option>Black Mouth Cur</ion-select-option>
+              <ion-select-option>Black Mouth Cur</ion-select-option>
+              <ion-select-option>Black Russian Terrier</ion-select-option>
+              <ion-select-option>Black Russian Terrier</ion-select-option>
+              <ion-select-option>Bloodhound</ion-select-option>
+              <ion-select-option>Bloodhound</ion-select-option>
+              <ion-select-option>Blue Lacy</ion-select-option>
+              <ion-select-option>Blue Lacy</ion-select-option>
+              <ion-select-option>Bluetick Coonhound</ion-select-option>
+              <ion-select-option>Bluetick Coonhound</ion-select-option>
+              <ion-select-option>Bocker</ion-select-option>
+              <ion-select-option>Bocker</ion-select-option>
+              <ion-select-option>Boerboel</ion-select-option>
+              <ion-select-option>Boxerdoodle</ion-select-option>
+              <ion-select-option>Boxerdoodle</ion-select-option>
+              <ion-select-option>Boxmatian</ion-select-option>
+              <ion-select-option>Boxmatian</ion-select-option>
+              <ion-select-option>Boxweiler</ion-select-option>
+              <ion-select-option>Boxweiler</ion-select-option>
+              <ion-select-option>Boykin Spaniel</ion-select-option>
+              <ion-select-option>Boykin Spaniel</ion-select-option>
+              <ion-select-option>Bracco Italiano</ion-select-option>
+              <ion-select-option>Bullmastiff</ion-select-option>
+              <ion-select-option>Carolina Dog</ion-select-option>
+              <ion-select-option>Chipin</ion-select-option>
+              <ion-select-option>Chiweenie</ion-select-option>
+              <ion-select-option>Chiweenie</ion-select-option>
+              <ion-select-option>Chorkie</ion-select-option>
+              <ion-select-option>Chorkie</ion-select-option>
+              <ion-select-option>Chow Chow</ion-select-option>
+              <ion-select-option>Chow Chow</ion-select-option>
+              <ion-select-option>Chow Shepherd</ion-select-option>
+              <ion-select-option>Cockalier</ion-select-option>
+              <ion-select-option>Cockalier</ion-select-option>
+              <ion-select-option>Cockapoo</ion-select-option>
+              <ion-select-option>Cockapoo</ion-select-option>
+              <ion-select-option>Cocker Spaniel</ion-select-option>
+              <ion-select-option>Cocker Spaniel</ion-select-option>
+              <ion-select-option>Collie</ion-select-option>
+              <ion-select-option>Collie</ion-select-option>
+              <ion-select-option>Corgi Inu</ion-select-option>
+              <ion-select-option>Corgi Inu</ion-select-option>
+              <ion-select-option>Corgidor</ion-select-option>
+              <ion-select-option>Corgidor</ion-select-option>
+              <ion-select-option>Corman Shepherd</ion-select-option>
+              <ion-select-option>Corman Shepherd</ion-select-option>
+              <ion-select-option>Coton de Tulear</ion-select-option>
+              <ion-select-option>Coton de Tulear</ion-select-option>
+              <ion-select-option>Doberdor</ion-select-option>
+              <ion-select-option>Doberdor</ion-select-option>
+              <ion-select-option>Doberman Pinscher</ion-select-option>
+              <ion-select-option>Doberman Pinscher</ion-select-option>
+              <ion-select-option>Docker</ion-select-option>
+              <ion-select-option>Docker</ion-select-option>
+              <ion-select-option>Dogo Argentino</ion-select-option>
+              <ion-select-option>Dogo Argentino</ion-select-option>
+              <ion-select-option>Dogue de Bordeaux</ion-select-option>
+              <ion-select-option>English Toy Spaniel</ion-select-option>
+              <ion-select-option>French Bulldog</ion-select-option>
+              <ion-select-option>French Bulldog</ion-select-option>
+              <ion-select-option>French Bullhuahua</ion-select-option>
+              <ion-select-option>French Bullhuahua</ion-select-option>
+              <ion-select-option>German Pinscher</ion-select-option>
+              <ion-select-option>German Shepherd Dog</ion-select-option>
+              <ion-select-option>German Shepherd Dog</ion-select-option>
+              <ion-select-option>German Shepherd Pit Bull</ion-select-option>
+              <ion-select-option>Komondor</ion-select-option>
+              <ion-select-option>Kooikerhondje</ion-select-option>
+              <ion-select-option>Labernese</ion-select-option>
+              <ion-select-option>Labernese</ion-select-option>
+              <ion-select-option>Labmaraner</ion-select-option>
+              <ion-select-option>Labmaraner</ion-select-option>
+              <ion-select-option>Lakeland Terrier</ion-select-option>
+              <ion-select-option>Lancashire Heeler</ion-select-option>
+              <ion-select-option>Lancashire Heeler</ion-select-option>
+              <ion-select-option>Leonberger</ion-select-option>
+              <ion-select-option>Leonberger</ion-select-option>
+              <ion-select-option>Maltese Shih Tzu</ion-select-option>
+              <ion-select-option>Maltese Shih Tzu</ion-select-option>
+              <ion-select-option>Maltipoo</ion-select-option>
+              <ion-select-option>Maltipoo</ion-select-option>
+              <ion-select-option>Manchester Terrier</ion-select-option>
+              <ion-select-option>Morkie</ion-select-option>
+              <ion-select-option>Morkie</ion-select-option>
+              <ion-select-option>Mountain Cur</ion-select-option>
+              <ion-select-option>Mountain Cur</ion-select-option>
+              <ion-select-option>Norfolk Terrier</ion-select-option>
+              <ion-select-option>Northern Inuit Dog</ion-select-option>
+              <ion-select-option>Pomapoo</ion-select-option>
+              <ion-select-option>Pomapoo</ion-select-option>
+              <ion-select-option>Pomchi</ion-select-option>
+              <ion-select-option>Pomchi</ion-select-option>
+              <ion-select-option>Pomeagle</ion-select-option>
+              <ion-select-option>Portuguese Podengo Pequeno</ion-select-option>
+              <ion-select-option>Portuguese Pointer</ion-select-option>
+              <ion-select-option>Portuguese Pointer</ion-select-option>
+              <ion-select-option>Portuguese Sheepdog</ion-select-option>
+              <ion-select-option>Portuguese Sheepdog</ion-select-option>
+              <ion-select-option>Portuguese Water Dog</ion-select-option>
+              <ion-select-option>Portuguese Water Dog</ion-select-option>
+              <ion-select-option>Pudelpointer</ion-select-option>
+              <ion-select-option>Pyrenean Mastiff</ion-select-option>
+              <ion-select-option>Pyrenean Shepherd</ion-select-option>
+              <ion-select-option>Pyrenean Shepherd</ion-select-option>
+              <ion-select-option>Saint Bernard</ion-select-option>
+              <ion-select-option>Saluki</ion-select-option>
+              <ion-select-option>Saluki</ion-select-option>
+              <ion-select-option>Samoyed</ion-select-option>
+              <ion-select-option>Samoyed</ion-select-option>
+              <ion-select-option>Samusky</ion-select-option>
+              <ion-select-option>Samusky</ion-select-option>
+              <ion-select-option>Schipperke</ion-select-option>
+              <ion-select-option>Schipperke</ion-select-option>
+              <ion-select-option>Schnoodle</ion-select-option>
+              <ion-select-option>Schnoodle</ion-select-option>
+              <ion-select-option>Scottish Deerhound</ion-select-option>
+              <ion-select-option>Scottish Deerhound</ion-select-option>
+              <ion-select-option>Spanish Mastiff</ion-select-option>
+              <ion-select-option>Spinone Italiano</ion-select-option>
+              <ion-select-option>Spinone Italiano</ion-select-option>
+              <ion-select-option>Springador</ion-select-option>
+              <ion-select-option>Springador</ion-select-option>
+              <ion-select-option>Stabyhoun</ion-select-option>
+              <ion-select-option>Stabyhoun</ion-select-option>
+              <ion-select-option>Staffordshire Bull Terrier</ion-select-option>
+              <ion-select-option>Staffordshire Bull Terrier</ion-select-option>
+              <ion-select-option>Staffy Bull Bullmastiff</ion-select-option>
+              <ion-select-option>Staffy Bull Bullmastiff</ion-select-option>
+              <ion-select-option>Standard Schnauzer</ion-select-option>
+              <ion-select-option>Standard Schnauzer</ion-select-option>
+              <ion-select-option>Sussex Spaniel</ion-select-option>
+              <ion-select-option>Sussex Spaniel</ion-select-option>
+              <ion-select-option>Swedish Lapphund</ion-select-option>
+              <ion-select-option>Swedish Lapphund</ion-select-option>
+              <ion-select-option>Swedish Vallhund</ion-select-option>
+              <ion-select-option>Swedish Vallhund</ion-select-option>
+              <ion-select-option>Taiwan Dog</ion-select-option>
+              <ion-select-option>Taiwan Dog</ion-select-option>
+              <ion-select-option>Terripoo</ion-select-option>
+              <ion-select-option>Transylvanian Hound</ion-select-option>
+              <ion-select-option>Transylvanian Hound</ion-select-option>
+              <ion-select-option>Treeing Tennessee Brindle</ion-select-option>
+              <ion-select-option>Treeing Tennessee Brindle</ion-select-option>
+              <ion-select-option>Treeing Walker Coonhound</ion-select-option>
+              <ion-select-option>Treeing Walker Coonhound</ion-select-option>
+              <ion-select-option>Valley Bulldog</ion-select-option>
+              <ion-select-option>Valley Bulldog</ion-select-option>
+              <ion-select-option>Vizsla</ion-select-option>
+              <ion-select-option>Vizsla</ion-select-option>
+              <ion-select-option>Weimaraner</ion-select-option>
+              <ion-select-option>Weimaraner</ion-select-option>
+              <ion-select-option>Welsh Springer Spaniel</ion-select-option>
+
+
+            </ion-select>
+          </ion-item>
+        <ion-item>
+          <ion-label>Gender</ion-label>
+            <ion-select placeholder="Select One" ngDefaultControl formControlName="gender">
+              <ion-select-option value="F">Female</ion-select-option>
+              <ion-select-option value="Male">Male</ion-select-option>
+            </ion-select>
+          </ion-item>
+      <br>
+           <ion-item>
+            <ion-label>Status for breeding</ion-label>
+              <ion-select placeholder="Select" ngDefaultControl formControlName="status">
+                <ion-select-option value="Active">Active</ion-select-option>
+                <ion-select-option value="notActive">Not Active</ion-select-option>
+              </ion-select>
+          </ion-item>
+    
+  
+    
+    <form-button label="Create" (click)="createPet()"></form-button>
+    </div>
+    </center>
+  
+  
+</ion-content>

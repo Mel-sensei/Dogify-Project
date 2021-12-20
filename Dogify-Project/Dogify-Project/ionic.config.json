@@ -1,0 +1,7 @@
+{
+  "name": "Dogify",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}

@@ -1,0 +1,129 @@
+.name {
+    color: #000000;
+    margin-top: 10px !important;
+    margin-bottom: 10px !important;
+    margin: 0 auto;
+    text-align: center;
+}
+
+
+
+ion-avatar{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    height: 100px;
+    width: 100px;
+}
+
+ion-menu-toggle{
+    box-shadow: none;
+}
+
+.menu-header-bg{
+    height: 180px;
+    width: 290px;
+    background: #a0a;
+    
+    box-shadow: 0px 1px 10px rgba(98, 140, 255, 0.5);
+    
+    border-radius: 10px 10px 50px 0px;
+    
+    margin-top: -50px;
+    margin-bottom: 30px
+}
+.action-button{
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    font-size: small;
+  
+}
+
+.header-content{
+    position: absolute;
+    top: 30px;
+    left: 15px;
+    display: flex;
+    align-items: center;
+
+    img{
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+        // border: 7px solid rgb(97, 8, 97);
+        margin-right: 14px;
+    }
+
+    h2 {
+        font-weight: 300;
+        font-size: 20px;
+        color: #fff;
+    }
+
+
+    p{
+        font-size: 11px;
+        color: #e4e4e4;
+        font-weight: 100;
+        letter-spacing: 0.4px;
+    }
+}
+
+.menu-items{
+    margin: 0px;
+
+    ion-icon{
+        margin-right: 20px;
+        color: #86979f;
+
+    }
+
+    ion-item{
+        padding-left: 20px;
+        margin-bottom: 10px;
+    }
+}
+.styleToolbar{
+    --background-color: #EE825A;
+}
+ion-menu {
+    // --ion-background-color: rgb(36, 104, 143);
+       
+
+    ion-toolbar {
+        --background: transparent;
+        --background-color: #EE825A;
+       
+    }
+
+    // ion-list {
+    //     background: rgb(179, 148, 84);
+    // }
+    // ion-item {
+        // background: rgb(179, 148, 84);
+        // --background: transparent;
+
+    // }
+    ion-content {
+        --background: transparent;
+    }
+    
+    ion-title{
+        font-size: 30px;
+        align-content: center;
+        // background-color: rgb(202, 76, 27);
+       }
+    
+}
+
+h3 {
+    
+    margin-top: 20px;
+    margin: 20px;
+    font-size: 30px;
+    font-weight: 700;
+    text-align: center;
+    padding-left: 20px;
+    
+  }

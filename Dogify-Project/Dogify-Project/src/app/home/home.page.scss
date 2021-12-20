@@ -1,0 +1,28 @@
+ion-content{
+
+  --background: #34B0D2 url('/assets/images/Background.png') no-repeat center top fixed;
+  background-size: cover;  
+  
+  
+}
+ion-tab-bar {
+  --color-selected: #a0a;
+  // padding: 10px 0;
+  // position: absolute;
+  // bottom: 0;
+  width: 100%;
+  --background: beige	;
+  align-self: center;
+  border-radius: 20px 20px 0px 0px;
+  // margin-bottom: 10px;
+  ion-tab-button {
+    ion-icon {
+      --background: beige;
+      // rgba(0, 0, 0, 0.468)
+    }
+  }
+}
+
+ion-card{
+  margin-bottom: 10px;
+}

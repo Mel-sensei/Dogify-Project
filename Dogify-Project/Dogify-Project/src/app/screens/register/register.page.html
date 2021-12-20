@@ -1,0 +1,32 @@
+<ion-content>
+
+  
+  <center>
+    <img src="/assets/icon/DOGIFY.png" style="align-items: center;">
+    <h2>Find your dog a partner</h2>
+  
+    <h1>Sign up to get started!</h1>
+    <br>
+    <input type="file" accept="image/png, image/jpeg"  (change)="selectFile($event)" > 
+    <br>
+    <br>
+    <div [formGroup]="profileForm">
+    <app-input  label="First name" name="firstname" ngDefaultControl formControlName="firstname"></app-input>
+
+    <app-input  label="Last name" name="lastname" ngDefaultControl formControlName="lastname"></app-input>
+
+    <app-input label="Email" name="email" ngDefaultControl formControlName="email"></app-input>
+
+    <app-input label="Contact Number" name="contactNumber" ngDefaultControl formControlName="contactNumber"></app-input>
+
+    <app-input label="Address" name="address" ngDefaultControl formControlName="address"></app-input>
+
+    <app-input type="Password" label="Password" name="password" ngDefaultControl formControlName="password"></app-input>
+    
+    <form-button label="Signup" class="button" (click)="tryRegister()"></form-button>
+  
+    <p>Don't have an account? Login with <span routerLink="/login">Email</span></p>
+    </div>
+  </center>
+  
+</ion-content>

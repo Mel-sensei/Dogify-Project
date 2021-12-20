@@ -1,0 +1,24 @@
+
+<ion-content>
+  <app-back-button routerLink="/user-profile"></app-back-button>
+  <center>
+  <img src="/assets/icon/DOGIFY.png" style="align-items: center;">
+</center>
+
+<form  [formGroup]="profileForm">
+
+  <div class="content-margin">
+
+    <h1>Current Email:</h1>
+    
+    <ion-label><p>{{em}}</p></ion-label> <!--Dynamic user input typescript-->
+
+    <app-input label="New Email"  inputmode="email" formControlName="email" ngDefaultControl></app-input>
+    
+    <br>
+    <form-button (click)="updateUser()">Update</form-button>
+  </div>
+    
+</form>
+
+</ion-content>

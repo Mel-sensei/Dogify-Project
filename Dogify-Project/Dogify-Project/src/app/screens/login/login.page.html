@@ -1,0 +1,18 @@
+<ion-content >
+  
+  <center>
+    <img src="/assets/icon/DOGIFY.png" style="align-items: center;">
+    <h2>Find your dog a partner</h2>
+  
+    <h1>Welcome back!</h1>
+    <br>
+    <div [formGroup]="profileForm">
+            <app-input formControlName="email" label="Email" type="text"  label="Email" name="email" ngDefaultControl></app-input>
+            <app-input formControlName="password" label="Password" type="password" ngDefaultControl></app-input>
+          <form-button label="Log in" class="button" (click)="tryLogin()"></form-button>
+
+        </div>
+    <p>Already have an account? Let's go <span routerLink="/register">Signup</span></p>
+  
+  </center>
+</ion-content>

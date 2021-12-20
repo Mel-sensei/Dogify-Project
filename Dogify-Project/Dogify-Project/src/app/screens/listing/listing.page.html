@@ -1,0 +1,62 @@
+<ion-header>
+  <ion-toolbar>
+
+    <!-- <ion-avatar slot="end" >
+      <ion-badge color="danger" style="position: absolute;">2</ion-badge>
+      <img src="/assets/images/sample.jpg">
+    </ion-avatar> -->
+    
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  
+ 
+<center>
+  <img src="/assets/icon/DOGIFY.png" height="150px" width="150px">
+</center>
+  <!-- SEARCHBAR -->
+  <ion-searchbar [(ngModel)]="search" showCancelButton="focus"></ion-searchbar>
+
+      <ion-card *ngFor="let pet of pets | filter: search">
+        <div class="image" [ngStyle]="{'background-image': 'url(http://localhost/Dogify-Project/API/Uploads/' + pet.pet_image + ')'}">
+        
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        </div>
+        <ion-card-header>
+          <ion-card-title>Hi i'm {{pet.pet_name}}</ion-card-title>
+          <ion-card-subtitle>{{pet.pet_breed}}</ion-card-subtitle>
+        </ion-card-header>
+      
+        <ion-card-content class="ion-text-wrap">
+          <ion-icon name="compass" slot="start"></ion-icon>
+            Age:{{pet.pet_address}} ,<br> Age:{{pet.pet_age}} Gender:{{pet.pet_gender}}
+
+          <ion-button fill="clear" expand="block"  [routerLink]="['/detail/',pet.pet_id,pet.user_id]">
+            <ion-icon slot="start" name="eye"></ion-icon>
+            View 
+          </ion-button>
+
+        </ion-card-content>
+      
+      </ion-card>
+
+       
+
+       
+  
+</ion-content>

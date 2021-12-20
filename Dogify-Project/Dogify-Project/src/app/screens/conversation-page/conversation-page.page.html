@@ -1,0 +1,63 @@
+<ion-content>
+<div class="header ion-padding">
+  <div class="info" *ngFor = "let send of senderist">
+    <ion-icon name="chevron-back-outline" routerLink="/home/listing" *ngIf= "r == null " ></ion-icon>
+    <ion-icon name="chevron-back-outline" routerLink="/messages" *ngIf= "r != null " ></ion-icon>
+    <!-- <ion-avatar class="ava" *ngIf="sender == user_id" [ngStyle] = "{'background-image': 'url(http://localhost/Dogify-Project/API/Uploads/' + send.user_image + ')'}">  
+        <div>
+          <br>
+          <br>
+          <br>
+        </div>
+    </ion-avatar>
+    <ion-avatar class="ava" *ngIf="reciever != sender" [ngStyle] = "{'background-image': 'url(http://localhost/Dogify-Project/API/Uploads/' + send.user_image + ')'}">  
+      <div>
+        <br>
+        <br>
+        <br>
+      </div>
+  </ion-avatar> -->
+    <span class="details"  *ngIf="reciever != sender" >
+      <h1>{{send.user_fullname}}  </h1>
+    </span><span class="details"  *ngIf="reciever != sender " >
+      <h1>{{send.user_fullname_r}}  </h1>
+    </span>
+  </div>
+  
+</div>
+<div class="conversation ion-padding" >
+  <div class="chat-section" id="chat" >
+      <div *ngFor = "let message of r"> 
+          <center>
+              <h4 *ngIf= "message == null ">
+                <B>Hi {{user_fullname}}...</B><br><br>
+                If you're Interested in one <br> of my dog just message me :> 
+              </h4>
+          </center>
+      </div>
+    <div class="chat"  *ngFor = "let message of r">
+      
+      <div class="yours messages" >
+        
+        <div class="message other"  *ngIf = "message.sender != reciever">
+          {{message.content}}
+          
+        </div>
+          
+        </div>
+        <div class="mine messages" >
+          <div class="message"*ngIf = "message.receiver != reciever">
+            {{message.content}}
+          </div>
+        </div>
+      </div>  
+    </div>
+
+  <div class="message-input"  *ngFor = "let aw of senderist">
+    <ion-input [(ngModel)]="message" placeholder="Type your message ..."></ion-input>
+    <div class="send-button" >
+      <ion-icon name="send-sharp" (click)="send(aw.user_image,aw.receiver)" ></ion-icon>
+    </div>
+  </div>
+</div>
+</ion-content>

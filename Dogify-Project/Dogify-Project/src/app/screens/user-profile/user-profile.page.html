@@ -1,0 +1,52 @@
+<ion-header>
+  <ion-toolbar>
+    <app-back-button slot="start" routerLink="/home/listing"></app-back-button>
+    <ion-title>
+      <h3>Edit User Profile</h3>
+    </ion-title>
+    <ion-button fill="clear" slot="end" style="color: #a0a;" size="larger" (click)="saveChanges()">
+      <ion-icon name="checkmark-outline"></ion-icon>
+    </ion-button>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content >
+ <ion-header class="avatar-display">
+   <center>
+    <ion-avatar >
+      <img [src]="image" class="image" >
+      <div class="overlay" (click)="presentAlert()">Tap to edit</div>
+    </ion-avatar>
+   </center>
+ </ion-header>
+
+<ion-list>
+  <ion-item routerLink="/change-email">
+    Email
+    <ion-label slot="end">{{user_email}}</ion-label>
+    <ion-icon name="arrow-forward" slot="end"></ion-icon>
+  </ion-item>
+  <ion-item routerLink="/change-name">
+    Full name
+    <ion-label slot="end">{{user_fullname}}</ion-label>
+    <ion-icon name="arrow-forward" slot="end"></ion-icon>
+  </ion-item>
+  <ion-item routerLink="/change-phone-number">
+    Contact Number
+    <ion-label slot="end">{{user_cn}}</ion-label>
+    <ion-icon name="arrow-forward" slot="end"></ion-icon>
+  </ion-item>
+  <ion-item routerLink="/change-address">
+    Address
+    <ion-label slot="end">{{user_address}}</ion-label>
+    <ion-icon name="arrow-forward" slot="end"></ion-icon>
+  </ion-item>
+  <ion-item routerLink="/change-password">
+    Change Password
+    <ion-label slot="end">********</ion-label>
+    <ion-icon name="arrow-forward" slot="end"></ion-icon>
+  </ion-item>
+</ion-list>
+
+</ion-content>
